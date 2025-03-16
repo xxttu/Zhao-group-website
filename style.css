@@ -1,0 +1,55 @@
+/* Reset some basic elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+  }
+  
+  header {
+    background: #004080;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  .nav-list {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+  }
+  
+  .nav-list li {
+    margin: 0 15px;
+  }
+  
+  .nav-list a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .section {
+    padding: 40px 0;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  footer {
+    background: #f4f4f4;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 20px;
+  }
+  
