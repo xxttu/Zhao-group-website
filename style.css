@@ -1,55 +1,121 @@
-/* Reset some basic elements */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    color: #333;
-  }
-  
-  .container {
-    width: 90%;
-    max-width: 1000px;
-    margin: auto;
-    padding: 20px;
-  }
-  
-  header {
-    background: #004080;
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
-  }
-  
+/* ====== General Styles ====== */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding-top: 80px; /* Push content below fixed navbar */
+  color: #333;
+  line-height: 1.6;
+  max-width: 100vw; /* Ensures body never overflows horizontally */
+  overflow-x: hidden; /* Prevents horizontal scrolling */
+}
+
+/* ====== Navigation Bar ====== */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #004080;
+  color: white;
+  padding: 15px 40px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-width: 100vw; /* Ensures it doesn't exceed screen width */
+  z-index: 1000;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden; /* Ensures no horizontal scrolling */
+}
+
+/* Zhao Group Title */
+.header-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+  white-space: nowrap;
+  flex-shrink: 0; /* Prevents title from getting cut off */
+}
+
+/* Navigation Menu */
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 18px; /* Space between menu items */
+  margin: 0;
+  padding: 0;
+  justify-content: flex-end;
+  flex-wrap: nowrap;
+  max-width: 80%; /* Expands nav width */
+  white-space: nowrap; /* Prevents text from wrapping */
+}
+
+/* Individual Menu Items */
+.nav-list li {
+  display: inline;
+}
+
+.nav-list a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav-list a:hover {
+  color: #ffcc00;
+}
+
+/* ====== Fix Section Overflow ====== */
+.section {
+  padding: 60px 20px;
+  max-width: 1200px; /* Prevents content from stretching too wide */
+  margin: auto;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* ====== Make Images Responsive ====== */
+img {
+  max-width: 100%; /* Ensures images never overflow */
+  height: auto; /* Keeps correct aspect ratio */
+  display: block;
+  margin: 20px auto; /* Centers images */
+}
+
+/* ====== Responsive Design Fix ====== */
+@media (max-width: 1100px) {
   .nav-list {
-    display: flex;
-    justify-content: center;
-    list-style: none;
+    gap: 12px; /* Reduce space between menu items */
+    font-size: 14px;
   }
-  
-  .nav-list li {
-    margin: 0 15px;
-  }
-  
-  .nav-list a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-  }
-  
-  .section {
-    padding: 40px 0;
-    border-bottom: 1px solid #ccc;
-  }
-  
-  footer {
-    background: #f4f4f4;
+}
+
+@media (max-width: 900px) {
+  header {
+    flex-direction: column;
+    align-items: center;
     text-align: center;
-    padding: 20px 0;
-    margin-top: 20px;
+    padding: 15px 20px;
   }
-  
+
+  .nav-list {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+    align-items: center;
+    max-width: 100%;
+  }
+
+  .nav-list a {
+    font-size: 18px;
+  }
+}
+
+/* ====== Footer ====== */
+footer {
+  background: #004080;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
