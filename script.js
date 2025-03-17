@@ -1,5 +1,8 @@
-// JavaScript for basic interactivity (optional)
-document.addEventListener("DOMContentLoaded", function() {
-    console.log("Website Loaded!");
+document.addEventListener("DOMContentLoaded", function () {
+  const menuToggle = document.querySelector(".menu-toggle");
+  const navList = document.querySelector(".nav-list");
+
+  menuToggle.addEventListener("click", function () {
+    navList.classList.toggle("show");
   });
-  
+});
