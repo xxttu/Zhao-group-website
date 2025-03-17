@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Zhao Group - Home</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- Navigation Bar -->
+  <!-- Navigation Bar (unchanged) -->
   <header>
-    <h1 class="header-title">Zhao Group</h1>
-    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    <h1 class="header-title">
+      <a href="index.html">Zhao Group</a>
+    </h1>
+    <!-- Hamburger button -->
+    <button class="hamburger">&#9776;</button>
     <nav>
       <ul class="nav-list">
         <li><a href="index.html">Home</a></li>
@@ -24,43 +27,60 @@
     </nav>
   </header>
   
-  
 
-  <!-- Home Section -->
-  <section id="home" class="section">
-    <div class="container">
-      <h2>Welcome to Zhao Research Group</h2>
-      <p>We are dedicated to advancing physics through cutting-edge research. Our focus is on [brief description of research area].</p>
-      <img src="Images/PDW.png" alt="Group Photo" class="hero-image">
+  <!-- Full-Width Hero Image Section -->
+  <section id="hero" class="hero-section">
+    <img src="Images/Home.png" alt="Group Photo" class="hero-image" />
+  </section>
+
+  <!-- Two-Column Introduction and Join Us Section -->
+  <section id="intro-join" class="section two-column-section">
+    <div class="container two-column">
+      <!-- Introduction Column -->
+      <div class="intro">
+        <h2>Welcome to Zhao Research Group</h2>
+        <p>We are dedicated to advancing physics through cutting-edge research. 
+           Our focus is on [brief description of research area].</p>
+      </div>
+      <!-- Join Us Column -->
+      <div class="join">
+        <h2>Join Our Group</h2>
+        <p>We are looking for talented researchers. Interested candidates should 
+           check our <a href="people.html">People Page</a> for details.</p>
+      </div>
     </div>
   </section>
 
-  <!-- Research Highlights -->
+  <!-- Research Highlights Section (remains below two-column section) -->
   <section id="highlights" class="section">
     <div class="container">
       <h2>Research Highlights</h2>
-      <p>Our recent work on [research topic] has been published in [journal]. Read more on our <a href="research.html">Research Page</a>.</p>
+      <p>Our recent work on [research topic] has been published in [journal]. 
+         Read more on our <a href="research.html">Research Page</a>.</p>
     </div>
   </section>
 
-  <!-- Openings Information -->
-  <section id="openings" class="section">
-    <div class="container">
-      <h2>Join Our Group</h2>
-      <p>We are looking for talented researchers. Interested candidates should check our <a href="people.html">People Page</a> for details.</p>
-    </div>
-  </section>
-
+  <!-- Expanded Footer with FSU Affiliation and Contact Details -->
   <footer>
     <div class="container">
-      <p>&copy; 2025 Zhao Research Group. All rights reserved.</p>
+      <div class="footer-contact">
+        <h3>Contact</h3>
+        <p>
+          Phone: 617-806-6742<br>
+          Email: <a href="mailto:hzhao7@fsu.edu">hzhao7@fsu.edu</a><br>
+          Address: 703-E KEEN
+        </p>
+        </div>
+      <div class="footer-affiliation">
+        <p>Zhao Research Group &bull; Department of Physics, Florida State University</p>
+        <p>&copy; 2025 Zhao Research Group. All rights reserved.</p>
+      </div>
     </div>
   </footer>
 
 <script src="script.js"></script>
 </body>
 </html>
-
 
 </body>
 </html>
