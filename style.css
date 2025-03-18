@@ -3,10 +3,30 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  color: #333;
+  background-color: black;
+  color: white;
   line-height: 1.6;
   max-width: 100vw;
   overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* update Text colors*/
+  h1,h2,h3,h4,h5,h6{color:white;
+  }
+  p {color:white;
+  }
+
+
+/* 🔹 Improve Link Visibility */
+a {
+  color: #1E90FF; /* Bright blue for better contrast on black background */
+  text-decoration: none; /* Remove underline */
+  font-weight: bold;
+}
+
+a:hover {
+  color: #FFCC00; /* Yellow hover effect for visibility */
+  text-decoration: underline;
 }
 
 /* Navigation Bar (existing styles) */
@@ -14,7 +34,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #004080;
+  background: #222;
   color: white;
   padding: 15px 40px;
   position: fixed;
@@ -23,7 +43,7 @@ header {
   width: 100%;
   max-width: 100vw;
   z-index: 1000;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 6px rgba(255,255,255,0.1);
 }
 .header-title {
   font-size: 24px;
@@ -117,31 +137,118 @@ header {
 
 }
 
-/* Two-Column Section (Introduction & Join Us) */
-.two-column-section .container {
+/* 🔹 Two-Column Section: Intro & Research Highlights */
+#intro-highlights .container {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   gap: 40px;
-  flex-wrap: wrap;  /* Allows stacking on small screens */
-}
-.two-column-section .intro, 
-.two-column-section .join {
-  flex: 1;
-  min-width: 300px; /* Ensures columns don't shrink too narrow */
-}
-.two-column-section h2 {
-  margin-top: 0;
+  flex-wrap: wrap; /* Ensures responsive stacking */
 }
 
-/* Research Highlights section spacing (if needed) */
-.section {
-  padding: 60px 0;
+/* 🔹 Left Column: Introduction */
+.intro {
+  flex: 1;
+  min-width: 300px; /* Ensures it doesn't shrink too much */
+}
+.intro p {text-align: justify;}
+
+/* 🔹 Right Column: Research Highlights */
+.highlights {
+  flex: 1;
+  min-width: 300px;
+}
+
+/* 🔹 Slideshow Container */
+.slideshow-container {
+  position: relative;
+  max-width: 100%;
+  margin: auto;
+  text-align: center;
+}
+
+
+/* 🔹 Hide All Slides by Default */
+.slide {
+  display: none;
+}
+
+/* 🔹 Image Styling */
+.highlight-image {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 5px;
+}
+
+/* 🔹 Caption Styling */
+.caption {
+  font-size: 16px;
+  color:aqua;
+  margin-top: 5px;
+}
+
+/* 🔹 Previous & Next Buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 10px;
+  background-color:darkgrey;
+  color: white;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  user-select: none;
+  transform: translateY(-50%);
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+/* 🔹 Adjust Slideshow Image Size */
+.highlight-image {
+  width: auto; /* Width adjusts automatically */
+  max-width: 100%; /* Prevents overflow */
+  height: 300px; /* Set a fixed height */
+  object-fit: cover; /* Crops images to fill space evenly */
+}
+
+
+/* 🔹 Join Us Section */
+#join-us {
+  text-align: left;
+  padding-top: 5px;
+  line-height: 1.5;
+}
+.spaced-text {
+  margin-top: 200px; /* Adjust space as needed */
+}
+
+/* 🔹 Responsive Adjustments */
+@media (max-width: 900px) {
+  #intro-highlights .container {
+    flex-direction: column; /* Stack columns */
+    text-align: center;
+  }
+  .highlight-image {
+    max-width: 100%;
+  }
 }
 
 /* Footer Styles */
 footer {
-  background: #004080;
+  background:#222;
   color: white;
   padding: 10px 0;
   font-size: 14px;
@@ -174,11 +281,11 @@ footer .container {
   margin: 0px 0;
 }
 footer a {
-  color: white;
+  color:#ffcc00;
   text-decoration: none;
 }
 footer a:hover {
-  color: #ffcc00;
+  color: #ff9900;
 }
 
 /* Responsive Footer (stack columns on small screens) */
@@ -223,7 +330,7 @@ footer a:hover {
     flex-shrink: 0;
   }
   .hero-section {
-    margin-top: 0px; /* Hero picture position */
+    margin-top: 40px; /* Hero picture position */
     padding-top: 0px;
   }
   /* Show the hamburger button on small screens */
@@ -238,7 +345,7 @@ footer a:hover {
     left: 100%;  /* Move off-screen */
     width: 110px;
     height: 250px;
-    background: #004080;
+    background:#222;
     padding-top: 60px; /*toggle list position*/
     padding-left: 0px;
     z-index: 500;
@@ -260,3 +367,301 @@ footer a:hover {
     left: 0;
   }
 }
+
+
+/* People Page set up */
+.person {
+  display: grid;
+  grid-template-columns: 300px 1fr 2fr; /* 3 columns: Picture | Name+Email | Bio */
+  gap: 20px;
+  align-items: center;
+  padding: 20px 0;
+  border-bottom: 1px solid #ddd; /* Divider between people */
+}
+.person-photo {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.person-details h3 {
+  margin: 5px 0;
+  font-size: 20px;
+}
+.person-details p {
+  margin: 3px 0;
+}
+.person-bio p {
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+/* 🔹 Section Title Before Each Category */
+.section-subtitle {
+  font-size: 24px; /* Same as 'Meet Our Team' */
+  font-weight: normal; /* Removes bold effect */
+  margin-top: 40px; /* Adds spacing before new section */
+  color:white; /* Keeps text color consistent */
+}
+
+/* 🔹 Special Styling for PI */
+.pi {
+  grid-template-columns: 300px 1fr 2fr; /* Larger Image for PI */
+}
+.pi-photo {
+  width: 300px;
+  height: 400px;
+}
+.cv-link {
+  display: inline-block;
+  margin-top: 5px;
+  background: #004080;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+.cv-link:hover {
+  background: #ffcc00;
+  color: #004080;
+}
+
+/* 🔹 Responsive Layout */
+@media (max-width: 900px) {
+  .person {
+    grid-template-columns: 1fr; /* Stack everything in one column */
+    text-align: center;
+  }
+  .person-photo {
+    margin: auto;
+  }
+  .cv-link {
+    display: inline-block; /* Center CV link below name */
+    margin: 10px auto;
+  }
+}
+/* People page style end */
+
+
+
+/* Publication page style */
+/* 🔹 Section Title */
+.section-subtitle {
+  font-size: 24px;
+  font-weight: normal;
+  margin-top: 40px;
+  color: #333;
+}
+
+/* 🔹 Publication Entry (Grid Layout) */
+.publication {
+  display: grid;
+  grid-template-columns: 200px 1fr; /* 2-column layout: Image | Details */
+  gap: 20px;
+  align-items: center;
+  padding: 20px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+/* 🔹 Paper Figure */
+.pub-figure {
+  width: 200px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 5px;
+}
+
+/* 🔹 Publication Details */
+.pub-details {
+  display: flex;
+  flex-direction: column;
+}
+
+/* 🔹 Title */
+.pub-title {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+/* 🔹 Authors */
+.pub-authors {
+  font-size: 16px;
+  margin-bottom: 5px;
+  color: #666;
+}
+
+/* 🔹 Journal Link */
+.pub-journal a {
+  font-size: 16px;
+  color: #1E90FF;
+  text-decoration: none;
+}
+.pub-journal a:hover {
+  color: #ffcc00;
+  text-decoration: underline;
+}
+
+/* 🔹 Single-Column Layout for Publications Before 2021 */
+.before-2021 .publication {
+  display: block; /* Removes grid layout */
+  text-align: left; /* Aligns text properly */
+  padding: 0px 0;
+}
+
+
+/* 🔹 Responsive Design for Small Screens */
+@media (max-width: 900px) {
+  .publication {
+    grid-template-columns: 1fr; /* Stack Image & Details in One Column */
+    text-align: center;
+  }
+  .pub-figure {
+    margin: auto;
+  }
+}
+/* Publication page style end */
+
+
+/* Research page style */
+/* 🔹 Section Title */
+.section-subtitle {
+  font-size: 24px;
+  font-weight: normal;
+  margin-top: 40px;
+  color:white;
+}
+
+/* 🔹 Research Section Layout (2 Columns: Image | Text) */
+.research-section {
+  display: grid;
+  grid-template-columns: 1fr 2fr; /* 2-column layout: Image | Text */
+  gap: 20px;
+  align-items: center;
+  padding: 20px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+/* 🔹 Research Images */
+.research-image {
+  width: 100%;
+  max-width: 1500px;
+  height: auto;
+  object-fit:contain;
+  border-radius: 5px;
+}
+
+/* 🔹 Research Text */
+.research-text h4 {
+  font-size: 18px;
+  margin-bottom: 50px;
+  margin-top: auto;
+}
+
+.research-text p {
+  font-size: 12px;
+  line-height: 1.4;
+  text-align: justify;
+}
+
+/* 🔹 Responsive Design for Small Screens */
+@media (max-width: 900px) {
+  .research-section {
+    grid-template-columns: 1fr; /* Stack Image & Text in One Column */
+    text-align: center;
+  }
+  .research-image {
+    margin: auto;
+  }
+}
+/* Research page style end*/
+
+
+
+
+/* Facilities page style*/
+/* 🔹 Section Title */
+.section-subtitle {
+  font-size: 24px;
+  font-weight: normal;
+  margin-top: 40px;
+  color:white;
+}
+
+/* 🔹 Facilities Section Layout (2 Columns: Image | Text) */
+.facilities-section {
+  display: grid;
+  grid-template-columns: 1fr 2fr; /* 2-column layout: Image | Text */
+  gap: 20px;
+  align-items: center;
+  padding: 20px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+/* 🔹 Facilities Images */
+.facilities-image {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 5px;
+}
+
+/* 🔹 Facilities Text */
+.facilities-text h4 {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.facilities-text p {
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+/* 🔹 Equipment Grid Layout (2 Columns) */
+.equipment-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 2-column layout */
+  gap: 20px;
+  padding: 20px 0;
+}
+
+/* 🔹 Individual Equipment */
+.equipment {
+  text-align: center;
+}
+
+.equipment-image {
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 5px;
+}
+
+.equipment h4 {
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.equipment p {
+  font-size: 16px;
+  margin-top: 5px;
+}
+
+/* 🔹 Responsive Design for Small Screens */
+@media (max-width: 900px) {
+  .facilities-section {
+    grid-template-columns: 1fr; /* Stack Image & Text in One Column */
+    text-align: center;
+  }
+  .facilities-image {
+    margin: auto;
+  }
+  .equipment-grid {
+    grid-template-columns: 1fr; /* Stack Equipments in One Column */
+  }
+}
+/* Facilities page style end*/
+
+

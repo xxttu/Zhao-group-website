@@ -8,12 +8,11 @@
 </head>
 <body>
 
-  <!-- Navigation Bar (unchanged) -->
+  <!-- Navigation Bar -->
   <header>
     <h1 class="header-title">
-      <a href="index.html">Zhao Group</a>
+      <a href="index.html">Zhao Lab</a>
     </h1>
-    <!-- Hamburger button -->
     <button class="hamburger">&#9776;</button>
     <nav>
       <ul class="nav-list">
@@ -26,61 +25,119 @@
       </ul>
     </nav>
   </header>
-  
 
   <!-- Full-Width Hero Image Section -->
   <section id="hero" class="hero-section">
-    <img src="Images/Home.png" alt="Group Photo" class="hero-image" />
+    <img src="Images/People_hero.jpg" alt="Group Photo" class="hero-image" />
   </section>
 
-  <!-- Two-Column Introduction and Join Us Section -->
-  <section id="intro-join" class="section two-column-section">
+  <!-- Two-Column Section: Introduction & Research Highlights -->
+   
+  <section id="intro-highlights" class="section">
     <div class="container two-column">
       <!-- Introduction Column -->
-      <div class="intro">
-        <h2>Welcome to Zhao Research Group</h2>
-        <p>We are dedicated to advancing physics through cutting-edge research. 
-           Our focus is on [brief description of research area].</p>
-      </div>
-      <!-- Join Us Column -->
-      <div class="join">
-        <h2>Join Our Group</h2>
-        <p>We are looking for talented researchers. Interested candidates should 
-           check our <a href="people.html">People Page</a> for details.</p>
-      </div>
-    </div>
-  </section>
+     <!-- Introduction Column -->
+<div class="intro">
+  <h2>Welcome to He Zhao Research Group</h2>
+  <p>
+    Our research is dedicated to discovering and engineering emergent quantum phenomena 
+    in quantum materials. We achieve this through the synthesis of 2D nanodevices using 
+    Molecular Beam Epitaxy (MBE) and exfoliation and co-lamination, followed by 
+    characterization via Spectroscopic Imaging-Scanning Tunneling Microscopy (SI-STM) 
+    and Spin-Polarized Scanning Tunneling Microscopy (SP-STM). Our primary focus is on 
+    exploring topological and correlated states in electron systems. 
+    <a href="research.html">Read more about our research.</a>
+  </p>
+</div>
 
-  <!-- Research Highlights Section (remains below two-column section) -->
-  <section id="highlights" class="section">
-    <div class="container">
-      <h2>Research Highlights</h2>
-      <p>Our recent work on [research topic] has been published in [journal]. 
-         Read more on our <a href="research.html">Research Page</a>.</p>
-    </div>
-  </section>
 
-  <!-- Expanded Footer with FSU Affiliation and Contact Details -->
-  <footer>
-    <div class="container">
-      <div class="footer-contact">
-        <h3>Contact</h3>
-        <p>
-          Phone: 617-806-6742<br>
-          Email: <a href="mailto:hzhao7@fsu.edu">hzhao7@fsu.edu</a><br>
-          Address: 703-E KEEN
-        </p>
+      <!-- Research Highlights Column -->
+      <div class="highlights">
+        <h2>Research Highlights</h2>
+        <div class="slideshow-container">
+          <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+
+          <div class="slide fade">
+            <img src="Images/Home/highlight1.jpg" alt="Highlight 1" class="highlight-image">
+            <p class="caption">Modulated SC gap in EuRbFe<sub>4</sub>As<sub>4</sub></p>
+            <p class="caption"><a href="link_to_paper1" target="_blank">Read More</a></p>
+          </div>
+
+          <div class="slide fade">
+            <img src="Images/Home/highlight2.jpg" alt="Highlight 2" class="highlight-image">
+            <p class="caption">Moire lattice in bernal bilayer graphene</p>
+            <p class="caption"><a href="link_to_paper2" target="_blank">Read More</a></p>
+          </div>
+
+          <div class="slide fade">
+            <img src="Images/Home/highlight3.jpg" alt="Highlight 3" class="highlight-image">
+            <p class="caption">Spin-polarized DOS modulation domains</p>
+            <p class="caption"><a href="link_to_paper3" target="_blank">Read More</a></p>
+          </div>
+
+          <div class="slide fade">
+            <img src="Images/Home/highlight4.jpg" alt="Highlight 4" class="highlight-image">
+            <p class="caption">Epitaxially grown Bi<sub>2</sub>Ti<sub>2</sub> on Fe(Te,Se)</p>
+            <p class="caption"><a href="link_to_paper4" target="_blank">Read More</a></p>
+          </div>
+
+          <div class="slide fade">
+            <img src="Images/Home/highlight5.jpg" alt="Highlight 5" class="highlight-image">
+            <p class="caption">Charge order and unidirectional quantum coherent state in CsV<sub>3</sub>Sb<sub>5</sub></p>
+            <p class="caption"><a href="link_to_paper5" target="_blank">Read More</a></p>
+          </div>
+
+          <button class="next" onclick="changeSlide(1)">&#10095;</button>
         </div>
-      <div class="footer-affiliation">
-        <p>Zhao Research Group &bull; Department of Physics, Florida State University</p>
-        <p>&copy; 2025 Zhao Research Group. All rights reserved.</p>
       </div>
     </div>
-  </footer>
+  </section>
 
-<script src="script.js"></script>
-</body>
-</html>
+      <!-- Join Us Section (Separate Row) -->
+    <section id="join-us" class="section">
+    <div class="container">
+        <h2>Join Us!</h2>
+        <p>We are looking for enthusiastic and motivated researchers to join our team at Florida State University!</p>
+        
+        <ul>
+          <li>Postdoctoral Position:<br> 
+              We currently have <strong>one open postdoc position</strong> focused on <strong>STM studies of interacting quantum materials</strong>, 
+              including single crystals and <strong>2D nanodevices</strong>.
+          </li>
+          <li>Graduate Students:<br> 
+              We have <strong>two openings</strong> for motivated graduate students interested in cutting-edge research on quantum materials.
+          </li>
+          <li>Undergraduate Students:<br> 
+              We are always looking for <strong>motivated undergraduate students</strong>, both at <strong>FSU and from other institutions</strong>, 
+              to participate in our research.
+          </li>
+      </ul>
+        <p>If you are interested in joining our group, please <strong>contact</strong>:  
+           <a href="mailto:hz24e@fsu.edu">hz24e@fsu.edu</a></p>
 
+        <p>For more details about our team, visit our <a href="people.html">People Page</a>.</p>
+    </div>
+    </section>
+
+
+<!-- 🔹 Footer Section -->
+<footer>
+  <div class="container">
+    <div class="footer-contact">
+      <h3>Contact</h3>
+      <p>Zhao Research Group</p>
+      <p>Department of Physics, XYZ University</p>
+      <p>Email: <a href="mailto:your.email@university.edu">your.email@university.edu</a></p>
+    </div>
+
+    <div class="footer-affiliation">
+      <p>&copy; 2025 Zhao Research Group. All rights reserved.</p>
+      <p>Affiliated with XYZ University</p>
+    </div>
+  </div>
+</footer>
+
+
+  <script src="script.js"></script>
 </body>
 </html>
