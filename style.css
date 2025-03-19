@@ -556,6 +556,12 @@ footer a:hover {
   border-bottom: 1px solid #ddd;
 }
 
+      /* to remove the board line between STM and STM data types */
+.research-section:nth-of-type(2) {
+  border-bottom: none;
+}
+
+
 /* 🔹 Research Images */
 .research-image {
   width: 100%;
@@ -568,7 +574,7 @@ footer a:hover {
 /* 🔹 Research Text */
 .research-text h4 {
   font-size: 18px;
-  margin-bottom: 50px;
+  margin-bottom: 10px;
   margin-top: auto;
 }
 
