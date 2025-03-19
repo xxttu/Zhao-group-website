@@ -245,7 +245,8 @@ header {
   #intro-highlights .container {
     flex-direction: column; /* Stack columns */
     text-align: center;
- 
+    justify-content: center;
+    align-items: center;
   }
   .highlight-image {
     max-width: 100%;
