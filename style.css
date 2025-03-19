@@ -714,6 +714,30 @@ footer a:hover {
     grid-template-columns: 1fr; /* Stack Equipments in One Column */
   }
 }
+
+/*add after change of description*/
+
+@media (max-width: 768px) {
+  .hero-overlay {
+    width: 90%;
+    font-size: 0.9rem;
+    padding: 15px;
+  }
+}
+
+.equipment-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .equipment-grid {
+    grid-template-columns: 1fr; /* Stacks items on smaller screens */
+  }
+}
+
+
 /* Facilities page style end*/
 
 
