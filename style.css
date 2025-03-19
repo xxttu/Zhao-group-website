@@ -343,7 +343,7 @@ footer a:hover {
     flex-shrink: 0;
   }
   .hero-section {
-    margin-top: 40px; /* Hero picture position */
+    margin-top: 60px; /* Hero picture position */
     padding-top: 0px;
   }
   /* Show the hamburger button on small screens */
