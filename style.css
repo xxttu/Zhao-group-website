@@ -683,12 +683,12 @@ footer a:hover {
 }
 
 .equipment-image {
-  width: 100%; /* Make it responsive */
-  max-width: 450px; /* Prevents being too large */
-  height: auto; /* Maintain aspect ratio */
-  object-fit: contain; /* Ensures full image is visible */
-  border-radius: 5px;
+  width: 450px; /* Set a fixed width */
+  height: 400px; /* Set a fixed height */
+  object-fit: cover; /* Crops the image while maintaining aspect ratio */
+  border-radius: 5px; /* Optional: Keeps rounded corners */
 }
+
 
 
 
@@ -714,10 +714,13 @@ footer a:hover {
   .equipment-grid {
     grid-template-columns: 1fr; /* Stack Equipments in One Column */
   }
-  .equipment-image {
-    max-width: 100%; /* Ensure it adapts to screen size */
-    height: auto; /* Keep proportions */
+  @media (max-width: 900px) {
+    .equipment-image {
+      width: 300px; /* Slightly smaller for mobile */
+      height: 300px; /* Keep proportions */
+    }
   }
+  
 }
 
 /*add after change of description*/
