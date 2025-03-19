@@ -184,14 +184,14 @@ header {
   display: none;
 }
 
-/* 🔹 Image Styling */
+/* 🔹 Adjust Slideshow Image Size */
 .highlight-image {
-  width: 100%;
-  max-width: 500px;
-  height: auto;
-  border-radius: 5px;
+  width: auto; /* Width adjusts automatically */
+  max-width: 100%; /* Prevents overflow */
+  height: 400px; /* Set a fixed height */
+  object-fit: cover; /* Crops images to fill space evenly */
 }
-
+ 
 /* 🔹 Caption Styling */
 .caption {
   font-size: 16px;
@@ -227,13 +227,6 @@ header {
   background-color: rgba(255, 255, 255, 0.8);
 }
 
-/* 🔹 Adjust Slideshow Image Size */
-.highlight-image {
-  width: auto; /* Width adjusts automatically */
-  max-width: 100%; /* Prevents overflow */
-  height: 400px; /* Set a fixed height */
-  object-fit: cover; /* Crops images to fill space evenly */
-}
 
 
 /* 🔹 Join Us Section */
@@ -252,10 +245,17 @@ header {
   #intro-highlights .container {
     flex-direction: column; /* Stack columns */
     text-align: center;
+ 
   }
   .highlight-image {
     max-width: 100%;
   }
+    .highlight-image {
+      height: auto; /* Allow flexible height */
+      max-height: 300px; /* Limit height to prevent oversized images */
+      object-fit: contain; /* Show the full image without cropping */
+    }
+
 }
 
 /* Footer Styles */
