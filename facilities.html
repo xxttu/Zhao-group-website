@@ -10,7 +10,7 @@
 
   <header>
     <h1 class="header-title">
-      <a href="index.html">Zhao Group</a>
+      <a href="index.html">Zhao <span class="lab-text">Lab</span></a>
     </h1>
     <button class="hamburger">&#9776;</button>
     <nav>
@@ -25,19 +25,26 @@
     </nav>
   </header>
 
-  <!-- 🔹 Hero Image Section -->
-  <section class="hero-section">
-    <img src="Images/People_hero.jpg" alt="Lab Facilities" class="hero-image">
-  </section>
+ <!-- 🔹 Hero Image Section with IRCB Description Overlaid -->
+ <section class="hero-section">
+  <div class="hero-image-container">
+    <img src="Images/Facilities/fac_IRCB_3.jpg" alt="Lab Facilities" class="hero-image">
+    <div class="hero-overlay">
+      <p>Our Lab is located in the Interdisciplinary Research and Commercialization Building (IRCB) a newly constructed research facility at Florida State University. Our lab is equipped with state-of-the-art tools for materials synthesis and characterization, fostering collaboration and innovation in quantum materials research.</p>
+    </div>
+  </div>
+</section>
 
   <section class="section">
     <div class="container">
       <h2>Our Facilities</h2>
 
       <!-- 🔹 Overview Section -->
+      <!--removed-->
+      <!---
       <h3 class="section-subtitle">Overview</h3>
       <div class="facilities-section">
-        <img src="Images/fac_IRCB_1.jpg" alt="Lab Building" class="facilities-image">
+        <img src="Images/Facilities/fac_IRCB_1.jpg" alt="Lab Building" class="facilities-image">
         <div class="facilities-text">
           <h4>IRCB</h4>
           <p>
@@ -48,29 +55,31 @@
           </p>
         </div>
       </div>
+      ->
+      <!--removed-->
 
      <!-- 🔹 Major Equipment Section -->
 <h3 class="section-subtitle">Major Equipment</h3>
 <div class="equipment-grid">
   <div class="equipment">
-    <img src="Images/fac_STM.jpeg" alt="Equipment 1" class="equipment-image">
-    <h4>Equipment Name 1</h4>
-    <p>Description of Equipment 1.</p>
+    <img src="Images/Facilities/fac_STM.jpeg" alt="Equipment 1" class="equipment-image">
+    <h4><span class="lab-text">Scanning Tunneling Microscope</span></h4>
+    <p>UNISOKU 1300, 9T-2T-2T magnetic field/0.3K</p>
   </div>
   <div class="equipment">
-    <img src="Images/fac_MBE.png" alt="Equipment 2" class="equipment-image">
-    <h4>Equipment Name 2</h4>
-    <p>Description of Equipment 2.</p>
+    <img src="Images/Facilities/fac_MBE_1.png" alt="Equipment 2" class="equipment-image">
+    <h4><span class="lab-text">Molecular Beam Epitaxially</span></h4>
+    <p>For chalcogenides thin film sythesis</p>
   </div>
   <div class="equipment">
-    <img src="Images/fac_transfer.jpg" alt="Equipment 3" class="equipment-image">
-    <h4>Equipment Name 3</h4>
-    <p>Description of Equipment 3.</p>
+    <img src="Images/Facilities/fac_transfer.jpg" alt="Equipment 3" class="equipment-image">
+    <h4><span class="lab-text">Transfer Station</span></h4>
+    <p>2D co-laminated nanodevices </p>
   </div>
   <div class="equipment">
-    <img src="Images/fac_glovebox.jpg" alt="Equipment 4" class="equipment-image">
-    <h4>Equipment Name 4</h4>
-    <p>Description of Equipment 4.</p>
+    <img src="Images/Facilities/fac_glovebox.jpg" alt="Equipment 4" class="equipment-image">
+    <h4><span class="lab-text">Glovebox</span></h4>
+    <p>air-sensitive sample storage and nanodevice fabrication</p>
   </div>
 </div>
 
@@ -78,16 +87,23 @@
       <!-- 🔹 Other Equipment Section -->
       <h3 class="section-subtitle">Other Equipment</h3>
       <div class="equipment-grid">
+        
         <div class="equipment">
-          <img src="Images/equipment_3.jpg" alt="Equipment 3" class="equipment-image">
-          <h4>Equipment Name 1</h4>
-          <p>Description of Equipment 1.</p>
+          <img src="Images/Facilities/fac_Suitcase.pdf" alt="Equipment 3" class="equipment-image">
+          <h4><span class="lab-text">Ultra-High Vacuum "suitcase"</span></h4>
+          <p>For the transfer of samples between different UHV systems</p>
         </div>
+
+        <!-- 🔹 Other Equipment Section -->
+         <!--
         <div class="equipment">
           <img src="Images/equipment_4.jpg" alt="Equipment 4" class="equipment-image">
           <h4>Equipment Name 2</h4>
           <p>Description of Equipment 2.</p>
         </div>
+        -->
+        <!-- 🔹 Other Equipment Section -->
+
       </div>
 
     </div>
