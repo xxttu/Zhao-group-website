@@ -719,21 +719,19 @@ footer a:hover {
 
 @media (max-width: 768px) {
   .hero-overlay {
-    width: 90%;
+    width: 100%;
     font-size: 0.9rem;
     padding: 15px;
   }
 }
 
-.equipment-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
-  gap: 20px;
-}
 
 @media (max-width: 768px) {
   .equipment-grid {
     grid-template-columns: 1fr; /* Stacks items on smaller screens */
+  }
+  .equipment-image {
+    max-width: 300px;  /* Slightly smaller images on mobile */
   }
 }
 
