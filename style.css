@@ -780,3 +780,29 @@ footer a:hover {
 /* Facilities page style end*/
 
 
+/* Two-column layout for join us page */
+.join-container {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.form-column, .map-column {
+  flex: 1 1 45%;
+  min-width: 300px;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .join-container {
+    flex-direction: column;
+  }
+
+  .form-column, .map-column {
+    width: 100%;
+  }
+}
+/* join us page end*/
