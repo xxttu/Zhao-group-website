@@ -128,6 +128,14 @@ header {
   }
 }
 
+.nav-list a.active {
+  color: #ffcc00; /* or any color you want to highlight */
+  /*border-bottom: 2px solid #ffcc00; /* optional underline effect*/ 
+}
+
+
+
+
 /* Container for center alignment and padding */
 .container {
   max-width: 1200px;
@@ -355,9 +363,9 @@ footer a:hover {
   nav {
     position: fixed;
     top: 0;
-    left: 100%;  /* Move off-screen */
+    right: -150px
     width: 110px;
-    height: 250px;
+    height: auto;
     background:#222;
     padding-top: 60px; /*toggle list position*/
     padding-left: 0px;
@@ -376,9 +384,39 @@ footer a:hover {
   }
 
   /* Slide menu in when 'open' class is added */
-  nav.open {
-    left: 0;
+  @media (max-width: 900px) {
+    nav {
+      position: fixed;
+      top: 0;
+      right: -150px; /* 🔹 Hide off-screen by default */
+      width: 150px;
+      height: auto;
+      background: #222;
+      padding-top: 60px;
+      z-index: 500;
+      transition: right 0.3s ease; /* 🔹 Smooth slide-in */
+    }
+  
+    nav.open {
+      right: 0; /* 🔹 Slide in when .open is added */
+    }
+  
+    .nav-list {
+      flex-direction: column;
+      gap: 5px;
+    }
+  
+    .nav-list a {
+      display: block;
+      font-size: 16px;
+      padding: 5px;
+    }
+  
+    .hamburger {
+      display: block;
+    }
   }
+  
 }
 
 
@@ -739,9 +777,6 @@ footer a:hover {
     padding: 15px;
   }
 }
-
-
-
 /* Facilities page style end*/
 
 

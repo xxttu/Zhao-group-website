@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Join Us - Zhao Group</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <h1 class="header-title">
+      <a href="index.html">Zhao <span class="lab-text">Lab</span> @ FSU</a>
+    </h1>
+    <button class="hamburger">&#9776;</button>
+    <nav>
+      <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="people.html">People</a></li>
+        <li><a href="publications.html">Publications</a></li>
+        <li><a href="facilities.html">Facilities</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="join.html" class="active">Join Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+ <!-- 🔹 Hero Image Section -->
+ <section class="hero-section">
+    <img src="Images/People_hero.png" alt="Research Overview" class="hero-image">
+  </section>
+
+
+   <!-- Join Us Section (Separate Row) -->
+   <section id="join-us" class="section">
+    <div class="container">
+        <h2>openings</h2>
+        <ul>
+          <li>Postdoctoral Position:<br> 
+              We currently have <strong>one open postdoc position</strong> focused on <strong>STM studies of interacting quantum materials</strong>, 
+              including single crystals and <strong>2D nanodevices</strong>.
+          </li>
+          <li>Graduate Students:<br> 
+              We have <strong>two openings</strong> for motivated graduate students interested in cutting-edge research on quantum materials.
+          </li>
+          <li>Undergraduate Students:<br> 
+              We are always looking for <strong>motivated undergraduate students</strong>, both at <strong>FSU and from other institutions</strong>, 
+              to participate in our research.
+          </li>
+        </ul>
+       
+    </div>
+    </section>
+
+  <section class="section">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <p>If you are interested in joining our group, please <strong>contact</strong>:  
+        <a href="mailto:hzhao7@fsu.edu">hzhao7@fsu.edu</a> or leave a message</a>.</p>
+      <form id="joinForm">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Contact information (email):</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="interest">Research/Collaboration interest:</label><br>
+        <textarea id="interest" name="interest" rows="5" required></textarea><br><br>
+
+        <button type="submit">Submit</button>
+      </form>
+
+      <div id="status"></div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+  <script src="join.js"></script> <!-- this is where form submission happens -->
+</body>
+</html>
