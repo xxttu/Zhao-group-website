@@ -363,14 +363,14 @@ footer a:hover {
   nav {
     position: fixed;
     top: 0;
-    right: -150px
+    right: -150px;
     width: 110px;
     height: auto;
     background:#222;
     padding-top: 60px; /*toggle list position*/
     padding-left: 0px;
     z-index: 500;
-  }
+      }
 
   /* Stack the navigation links in a column */
   .nav-list {
@@ -395,7 +395,7 @@ footer a:hover {
       padding-top: 60px;
       z-index: 500;
       transition: right 0.3s ease; /* 🔹 Smooth slide-in */
-    }
+     }
   
     nav.open {
       right: 0; /* 🔹 Slide in when .open is added */
